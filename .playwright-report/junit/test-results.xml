@@ -1,0 +1,22 @@
+<testsuites id="" name="" tests="1" failures="1" skipped="0" errors="0" time="9.747282000005246">
+<testsuite name="api/products.spec.ts" timestamp="1667548743722" hostname="" tests="1" failures="1" skipped="0" time="8.259" errors="0">
+<testcase name="delete a product" classname="[chromium] › api/products.spec.ts › delete a product" time="8.259">
+<failure message="products.spec.ts:65:6 delete a product" type="FAILURE">
+<![CDATA[  [chromium] › api/products.spec.ts:65:6 › delete a product ========================================
+
+    TypeError: responseBody1.find is not a function
+
+      66 |     const response1 = await request.get(endPoints.getAllProducts)
+      67 |     const responseBody1 = await response1.json()
+    > 68 |     let productId = (responseBody1.find(o => o.name === 'p1_v1')).id
+         |                                    ^
+      69 |
+      70 |     const response = await request.delete(endPoints.delDeleteProduct(productId))
+      71 |     const responseBody = await response.json()
+
+        at /Users/rk/Automation/Dokan_e2e_playwright/tests/api/products.spec.ts:68:36
+]]>
+</failure>
+</testcase>
+</testsuite>
+</testsuites>
